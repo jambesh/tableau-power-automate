@@ -1,5 +1,6 @@
 
-[POWER AUTOMATE](https://github.com/jambesh/images/blob/main/power-automate-4.png?raw=true)
+![power-automate-4.png](https://github.com/jambesh/images/blob/main/power-automate-4.png?raw=true)
+
 # tableau-power-automate
 Automate Multisite Tableau Extract Refresh Failure to Slack , Microsoft Team , Email using no coding and using one webhook URL.
 Also Customize the message , icon with no coding.
