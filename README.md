@@ -16,7 +16,9 @@ With MS Flow, absolutely no coding require to setup the webhook and at the same 
    This is need one time to login to your Tableau server to create a webhook and after that you can uninstall Postman.
    
 
-##Steps:
-1) Download the postman script into your system.
-2) Import both Tableau Webhook and Environment file into Postman.
+## Steps:
+1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
+2) Download the two postman json scripts from this github repository  "Tableau Webhook Setup.* "  and "Tableau Environment.*"  into your system.
+3) Import both Tableau Webhook and Tableau Environment file into Postman.
+
 
