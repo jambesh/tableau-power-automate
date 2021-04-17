@@ -1,5 +1,5 @@
 
-![power-automate-4.png](https://github.com/jambesh/images/blob/main/power-automate-4.png?raw=true)
+![power-automate-4.png](https://github.com/jambesh/tableau-power-automate/blob/main/images/power-automate-jpeg.jpg?raw=true)
 
 # Tableau Power Automate
 Automate Multisites Tableau Extract Refresh Failure to Slack , Microsoft Team , Email using tableau webhook and MS flow .
