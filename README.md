@@ -20,6 +20,7 @@ With MS Flow, absolutely no coding require to setup the webhook and at the same 
 1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
 2) Download the two postman json scripts from this github repository  "Tableau Webhook Setup.* "  and "Tableau Environment.*"  into your system.
 3) Import both Tableau Webhook and Tableau Environment file into Postman.
-   ![power-automate-4.png](https://github.com/jambesh/tableau-power-automate/blob/main/images/power-automate-jpeg.jpg?raw=true)
+   ![recording-1.mov](https://github.com/jambesh/tableau-power-automate/blob/main/images/recording-1.mov?raw=true)
+
 
 
