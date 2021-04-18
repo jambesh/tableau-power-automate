@@ -70,10 +70,10 @@ We will handle that in a if then else mapping in MS Flow -
    
       *  Edit and Change just the  new Site name in Tableau Environment collection and re-run step-4 through Step-6.
       *  Collect the Site LUID returned in the JSON .
-      *  These SITE LUIDs , You can update in the  Microsoft Flow Dynamic Expression to map Site LUID to Site Name.
-      *  Example :  If for the first time you login for your Default site and you got the site id  xyxyxyxyxyyxy 
-         and second time you login for a different site says "Finance" and got a  Site luid tsoaskjxxxaddolmml 
-         then in the MS flow dynamic expression replace your  Site ID &  Site Name to map and display in Slack/MS Team correctly.
+      *  These SITE LUIDs , You can then update in the  Microsoft Flow Dynamic Expression to map Site LUID to Site Name.
+      *  Example :  If for the first time you login to your Default site and you got the site id  d123456789
+         and second time you login for a different site says "Finance" and got a  Site luid f123456789
+      *  Go to Microsoft flow then in the MS flow dynamic expression replace your  Site ID &  Site Name to map and display in Slack/MS Team correctly.
 
   Once you update the MS Flow Dynamic expression with the right Site LUID/Site Name You shuld see real time Alert from multi Site in same channel dynamically.
     
