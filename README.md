@@ -43,9 +43,9 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    3) What you need to update in the environment variable ?
       *   Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
       *   One of the ID/Password or Token/Secret variable  pair .
-      *       if you will use the postman request Login using ID/Password - then update User Name and Password . 
-      *       if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
-                (You can create a new Token Name/Secret from your Tableau User Profile setting(top right corner once you login to Tableau Server web interface).
+         *       if you will use the postman request Login using ID/Password - then update User Name and Password . 
+         *       if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
+                   (You can create a new Token Name/Secret from your Tableau User Profile setting(top right corner once you login to Tableau Server web interface).
    
 VARIABLE | INITIAL VALUE | CURRENT VALUE
 ---------| --------------|--------------
