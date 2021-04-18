@@ -53,7 +53,7 @@ We will handle that in a if then else mapping in MS Flow -
 
    ![EnvironmentVariableEdit-3.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/EnvironmentVariableEdit-3.jpg?raw=true)
    
-         *  For all the environment variable that need to be edit , just update the CURRENT_VALUE section and leave the initial as-is no need to update there.
+         *  For all the environment variables that need to be edit , just update the CURRENT_VALUE section and leave the initial as-is.
          *  Update  Tableau Server URL & Site Name (if the Site is Default then leave it empty)
          *  Webhook URL : This is important - Copy this URL from the Microsoft Flow that you created earlier.
          *  One of the ID/Password or Token/Secret variable  pair .
@@ -61,9 +61,10 @@ We will handle that in a if then else mapping in MS Flow -
          *  if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
             (You can create a new Token Name/Secret from your Tableau User Profile setting
 
-   4) Now time to login  - Select one of the Sign-In (Type) Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID and set all Environment variable automatically. ## Note : This step has slight different from Tableau postman as this will take care of automatically set Environment variable rather then you manually copy and paste and set them.
-   5) Create the webhook - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the webhook workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
-   * Collect the Site LUID return in the JSON  * 
+   4) Now time to login  - Select one of the Sign-In (Type) Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID and set all Environment variable automatically. ##  Note : This step has slight different from Tableau postman collection as this will take care of setting the Environment variable automatically rather you manually copy and paste them after login and before create the webhook.
+   5) To Create the webhook Data Source Failed Event , Select Create-webhook-datasource-refresh-failed  request and hit "Send" - This should create the webhook for data source failed events. 
+   6) To Create the webhook workbook failed events , select Create-webhook-workbook-refresh-failed Request and hit "Send" - This should create a webhook for Workbook failed. 
+   ## Note the Site ID returned in the JSON   --this will be use to setup the multi site setup in flow 
 
 ## For multi Site webhook Event Setup 
    
