@@ -39,14 +39,13 @@ We will handle that in a if then else mapping in MS Flow -
 
 
 
-# Step B : Create Tableau Webhook (Tell Tableau where to post events when it occur)
+# Step B : Create Tableau Webhook using postman (Tell Tableau where to post events when it occur)
 
 ###### Simple Postman Installation and Import Step:
    1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
-   2) Download the two postman json scripts from this github repository  "Tableau Webhook Setup.* "  and "Tableau Environment.*"  into your system.
-   3) Import both Tableau Webhook and Tableau Environment json file collection into Postman.
-      [Check How To Import Postman Collection](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-github-repositories)
-      Importing these two file/collection is pretty easy into post man - just choose import and select one file at a time .
+   2) Download the Postman Collection from github -
+   3) Import both Tableau Webhook Setup  and Tableau Environment request collection into postman by File -->Import or the Import option within the tool.
+   
 ###### After Import :
    1) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work.
    2) Just edit the Tableau Webhook Environment you imported and update your Tableau Environment Info/User info.
