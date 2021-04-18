@@ -1,15 +1,16 @@
 
 ![power-automate-4.png](https://github.com/jambesh/tableau-power-automate/blob/main/images/power-automate-jpeg.jpg?raw=true)
 
-# Tableau Power Automate
+# Tableau Power Automate : Automating Multisite Tableau Extract Refresh Failure.
 Automate Multisites Tableau Extract Refresh Failure to Slack , Microsoft Team , Email using tableau webhook and MS flow .
 With MS Flow, absolutely no coding require to setup the webhook and at the same time message custimization ,additional Multisite Setup is easy.
+Tableau Sent webhook POST message response in JOSN and only Site LUID and not the Site name, so unless you associate the LUID to Site name , failure from multi site to single channel or team channel is confusing as user will not know from which site extract failed. With a simple if then else for site mapping , this can be done in flow.
 
 * The good thing about the flow is 
-*      it will be within company license .
-*      No additional external subscription or site to be use for security.
-*      you can log your failure events to microsoft one drive for historical reporting.
-*      Check flow failure/Success events 
+      it will be within company license .
+      No additional external subscription or site to be use for security.
+      you can log your failure events to microsoft one drive for historical reporting.
+      Check flow failure/Success events 
 
 *Bonus:  Customize Failure Alert message to Team with rich text formatting . You can use ICONs etc.
 
