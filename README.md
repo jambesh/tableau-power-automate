@@ -7,9 +7,8 @@ With MS Flow, absolutely no coding require to setup the webhook and at the same 
 Tableau Sent webhook POST message response in JOSN and only Site LUID and not the Site name, so unless you associate the LUID to Site name , failure from multi site to single channel or team channel is confusing as user will not know from which site extract failed. With a simple if then else for site mapping , this can be done in flow.
 
 * The good thing about the flow is :
-*       it will be within company license .
-*       No additional external subscription or site to be use for security.
-*       you can log your failure events to microsoft one drive for historical reporting.
+*       It will be within company license for Office 365 (No additional subscription fees or trial)
+*       You can log your failure events to microsoft one drive for historical reporting.
 *       Check flow failure/Success events 
 
 *Bonus:  Customize Failure Alert message to Team with rich text formatting . You can use ICONs etc.
@@ -63,7 +62,6 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
   ![Site-1-And-Site-2-Message-Slack.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/Site-1-And-Site-2-Message-Slack.jpg?raw=true)
   ## MS Team Message Sample for Workbook & Data Source Failed Events
   ![MS-Team-event-1.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/MS-Team-event-1.jpg?raw=true)
-  
   ![MS-Team-event-2.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/MS-Team-Event-2.jpg?raw=true)
   
    
