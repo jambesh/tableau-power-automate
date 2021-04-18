@@ -64,13 +64,14 @@ We will handle that in a if then else mapping in MS Flow -
    4) Now time to login  - Select one of the Sign-In (Type) Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID and set all Environment variable automatically. ##  Note : This step has slight different from Tableau postman collection as this will take care of setting the Environment variable automatically rather you manually copy and paste them after login and before create the webhook.
    5) To Create the webhook Data Source Failed Event , Select Create-webhook-datasource-refresh-failed  request and hit "Send" - This should create the webhook for data source failed events. 
    6) To Create the webhook workbook failed events , select Create-webhook-workbook-refresh-failed Request and hit "Send" - This should create a webhook for Workbook failed. 
-   ##### Note the Site ID returned in the JSON   --this will be use to setup the multi site setup in flow 
+   ##### **Note : Note the Site ID returned in the JSON  for the site you just created the webhook
 
 ## For multi Site webhook Event Setup 
    
-      *  Edit and Change the Site name in Tableau Environment collection and re-run step-5 for Workbook and Data Source
-      *  Collect the Site LUID returned in the JSON 
+      *  Edit and Change just the  new Site name in Tableau Environment collection and re-run step-4 through Step-6.
+      *  Collect the Site LUID returned in the JSON .
       *  These SITE LUIDs , You can update in the  Microsoft Flow Dynamic Expression to map Site LUID to Site Name.
+      *  Example :  If for the first time you login and setup the webhook for Site Name says  Default and you got an id. xyxyxyxyxyyxy and second time you login and setup the webhook for a different site says "Finance" with Site luid tsoaskjxxxaddolmml  , then in in the MS flow just replace the correct Site ID & Equivalent Site Name to map and display in Slack/MS Team.
 
   Finally You shuld see real time Alert in all your medium of communication channel (slack/MS Team etc) from multi Site Like below -
     
