@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "a7ebd02b-6f88-41b7-a15b-555baae9a388",
+		"name": "Tableau Webhook Setup",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create-webhook-datasource-refresh-failed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "{{tableau_authToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"webhook\": {\n        \"webhook-source\": {\n            \"webhook-source-event-datasource-refresh-failed\": {}\n        },\n        \"webhook-destination\": {\n            \"webhook-destination-http\": {\n                \"method\": \"POST\",\n                \"url\": \"{{webhook_url}}\"\n            }\n        },\n        \"name\": \"Datasource-Refresh-Failed\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/api/3.8/sites/{{site_id}}/webhooks",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"3.8",
+						"sites",
+						"{{site_id}}",
+						"webhooks"
+					]
+				},
+				"description": "This POST request will  create webhook and instruct Tableau server to post any workbook refreshed failed event to the webhook URL\n\nSyntax:\n{{server_url}}/api/3.8/sites/{{site-id}}/webhooks\n\nServer_url is the envirment variable - Pls set it to your tableau server\nSite-id will automatically set"
+			},
+			"response": []
+		},
+		{
+			"name": "Create-webhook-workbook-refresh-failed",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Tableau-Auth",
+						"value": "{{tableau_authToken}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"webhook\": {\n        \"webhook-source\": {\n            \"webhook-source-event-workbook-refresh-failed\": {}\n        },\n        \"webhook-destination\": {\n            \"webhook-destination-http\": {\n                \"method\": \"POST\",\n                \"url\": \"{{webhook_url}}\"\n            }\n        },\n        \"name\": \"Workbook-Refresh-Failed\"\n    }\n}"
+				},
+				"url": {
+					"raw": "{{server_url}}/api/{{api_version}}/sites/{{site_id}}/webhooks",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"{{api_version}}",
+						"sites",
+						"{{site_id}}",
+						"webhooks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-in To Tableau Server using ID and Password",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = xml2Json(responseBody);",
+							"var myToken = responseJson[\"tsResponse\"][\"credentials\"][\"$\"][\"token\"];",
+							"pm.environment.set(\"tableau_authToken\", myToken);",
+							"var mySiteID = responseJson[\"tsResponse\"][\"credentials\"][\"site\"][\"$\"][\"id\"]",
+							"console.log(mySiteID)",
+							"pm.environment.set(\"site_id\", mySiteID);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tableau_authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<tsRequest>\r\n\t<credentials name=\"{{user_name}}\" password=\"{{password}}\">\r\n\t\t<site contentUrl=\"{{site_name}}\" />\r\n\t</credentials>\r\n</tsRequest>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}/api/{{api_version}}/auth/signin",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"{{api_version}}",
+						"auth",
+						"signin"
+					]
+				},
+				"description": "If you prefer to login using your ID password instead of Token You can use this."
+			},
+			"response": []
+		},
+		{
+			"name": "Sign-in To Tableau Server using Token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJson = xml2Json(responseBody);",
+							"var myToken = responseJson[\"tsResponse\"][\"credentials\"][\"$\"][\"token\"];",
+							"pm.environment.set(\"tableau_authToken\", myToken);",
+							"var mySiteID = responseJson[\"tsResponse\"][\"credentials\"][\"site\"][\"$\"][\"id\"]",
+							"console.log(mySiteID)",
+							"pm.environment.set(\"site_id\", mySiteID);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{tableau_authToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": true
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<tsRequest>\r\n  <credentials personalAccessTokenName=\"{{token_name}}\"\r\n    personalAccessTokenSecret=\"{{token_secret}}\">\r\n      <site contentUrl=\"{{site_name}}\" />\r\n  </credentials>\r\n</tsRequest>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server_url}}/api/{{api_version}}/auth/signin",
+					"host": [
+						"{{server_url}}"
+					],
+					"path": [
+						"api",
+						"{{api_version}}",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
