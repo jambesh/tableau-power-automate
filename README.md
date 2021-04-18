@@ -47,21 +47,21 @@ We will handle that in a if then else mapping in MS Flow -
    3) Import both Tableau Webhook Setup  and Tableau Environment request collection into postman by File -->Import or the Import option within the tool.
    
 ###### After Import :
-   1) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work.
-   2) Just edit the Tableau Webhook Environment you imported and update your Tableau Environment Info/User info.
-   ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
+   1) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work - Check the Test section of the collection in postman, you will notice i have placed some Java Script code to automatically parse the json result and set the environment variable for you and this is different from Tableau postman collection.
+   2) Just edit the Tableau Webhook Environment you imported by clicking on Eye Icon at the top right (next to environment drop down list) and  edit to update your Tableau Environment Info/User info.
    3) What you need to update in the environment variable ?
 
    ![EnvironmentVariableEdit-3.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/EnvironmentVariableEdit-3.jpg?raw=true)
    
-         *  Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
+         *  Update  Tableau Server URL & Site Name (if the Site is Default then leave it empty)
+         *  Webhook URL : This is important - Copy this URL from the Microsoft Flow that you created earlier.
          *  One of the ID/Password or Token/Secret variable  pair .
          *  if you will use the postman request Login using ID/Password - then update User Name and Password . 
          *  if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
             (You can create a new Token Name/Secret from your Tableau User Profile setting
 
-   4) Now time to login  - Click on one of the Login (Type) Postman Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID .
-   5) Create the webhook magic  - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the webhook workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
+   4) Now time to login  - Select one of the Sign-In (Type) Postman Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID and set all Environment variable automatically. ## Note : This step has slight different from Tableau postman as this will take care of automatically set Environment variable rather then you manually copy and paste and set them.
+   5) Create the webhook - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the webhook workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
    * Collect the Site LUID return in the JSON  * 
 
 ## For multi Site webhook Event Setup 
