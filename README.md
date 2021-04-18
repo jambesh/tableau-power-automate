@@ -28,7 +28,7 @@ Setting up the webhook URL , Setting up multi site configuration and message for
 it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instruction and you should be ready in 15 min.
 
 
-# Step B : Direct Tableau to Post Data Refresh Events to your webhook
+# Step B : Create Tableau Webhook (Tell Tableau where to post Events when it occur)
 
 ###### Simple Postman Installation and Import Step:
    1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
