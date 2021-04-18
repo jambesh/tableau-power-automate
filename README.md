@@ -52,8 +52,17 @@ Part-2:Parse the JSON response from Webhook to use in Message Customization.
    *  Fianlly specify the date format you want to see for your extract failed time - I liked the exact time in this format  "Full date/time pattern (short time) - Monday, June 15, 2009 1:45 PM [f]"
    
 
-Part-3: Send Message To Slack/MS Team and customize message formatting /multi site condition.
+Part-3: Configure Message To Slack/MS Team and customize message formatting /multi site condition.
+  * +Next Step (add a new step) and select Microsoft Team from the list of available operation .
+  * Then select "Post Message as Flow Bot to the Channel" and select the Team Name to which you want to direct your message and then the channel Name ("General")
+  * Add a Subject Line in the subject Line Field
+  * Customize Message in the  Message Field text box  by  selecting appropiate field and highlighting text in rich text font/color. 
+   Notice that the converted Time field is available now under dynamic expression (this is the extract failed time converted to specific time zone and format)
+   For the site name use the dynamic expression like below for multi site as place holder and later, copy the site ID from the postman login and update the correct Site ID .
+   ## if(equals(body('Parse_JSON')?['site_luid'],'6aee4c73-d241-4b5a-835a-a564e7f41999'),'Default','Site-1')
 
+  * To add a parallel branch to send the message to slack repeat step -3 but this time instead of Selecting Microsoft Team, Select Slack and fill the info in same way. The only difference is Slack messaging don't support the same rich text editing like MS team but that is OK. 
+  * in Slack configuration you can specify the ICON url for Slack bot logo for logo customization.
 
 
 
