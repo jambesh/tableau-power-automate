@@ -28,7 +28,7 @@ Setting up the webhook URL , Setting up multi site configuration and message for
 it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instruction and you should be ready in 15 min.
 
 
-# Step B : Create Tableau Webhook (Tell Tableau where to post Events when it occur)
+# Step B : Create Tableau Webhook (Tell Tableau where to post events when it occur)
 
 ###### Simple Postman Installation and Import Step:
    1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
@@ -41,6 +41,11 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    2) Just edit the Tableau Webhook Environment you imported and update your Tableau Environment Info/User info.
    ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
    3) What you need to update in the environment variable ?
+          Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
+          One of the ID/Password or Token/Secret variable  pair .
+             ** if you will use the postman request Login using ID/Password - then update User Name and Password . 
+             ** if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
+                (You can create a new Token Name/Secret from your Tableau User Profile setting(top right corner once you login to Tableau Server web interface).
    
 VARIABLE | INITIAL VALUE | CURRENT VALUE
 ---------| --------------|--------------
