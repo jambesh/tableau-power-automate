@@ -71,9 +71,11 @@ We will handle that in a if then else mapping in MS Flow -
       *  Edit and Change just the  new Site name in Tableau Environment collection and re-run step-4 through Step-6.
       *  Collect the Site LUID returned in the JSON .
       *  These SITE LUIDs , You can update in the  Microsoft Flow Dynamic Expression to map Site LUID to Site Name.
-      *  Example :  If for the first time you login and setup the webhook for Site Name says  Default and you got an id. xyxyxyxyxyyxy and second time you login and setup the webhook for a different site says "Finance" with Site luid tsoaskjxxxaddolmml  , then in in the MS flow just replace the correct Site ID & Equivalent Site Name to map and display in Slack/MS Team.
+      *  Example :  If for the first time you login for your Default site and you got the site id  xyxyxyxyxyyxy 
+         and second time you login for a different site says "Finance" and got a  Site luid tsoaskjxxxaddolmml 
+         then in the MS flow dynamic expression replace your  Site ID &  Site Name to map and display in Slack/MS Team correctly.
 
-  Finally You shuld see real time Alert in all your medium of communication channel (slack/MS Team etc) from multi Site Like below -
+  Once you update the MS Flow Dynamic expression with the right Site LUID/Site Name You shuld see real time Alert from multi Site in same channel dynamically.
     
   ## Slack Message Sample for Workbook  & Data Source Failed Events
   ![Site-1-And-Site-2-Message-Slack.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/Site-1-And-Site-2-Message-Slack.jpg?raw=true)
