@@ -59,7 +59,7 @@ Part-3: Configure Message To Slack/MS Team and customize message formatting /mul
   * Customize Message in the  Message Field text box  by  selecting appropiate field and highlighting text in rich text font/color. 
    Notice that the converted Time field is available now under dynamic expression (this is the extract failed time converted to specific time zone and format)
    For the site name use the dynamic expression like below for multi site as place holder and later, copy the site ID from the postman login and update the correct Site ID .
-   ## if(equals(body('Parse_JSON')?['site_luid'],'6aee4c73-d241-4b5a-835a-a564e7f41999'),'Default','Site-1')
+   ###### if(equals(body('Parse_JSON')?['site_luid'],'6aee4c73-d241-4b5a-835a-a564e7f41999'),'Default','Site-1')
 
   * To add a parallel branch to send the message to slack repeat step -3 but this time instead of Selecting Microsoft Team, Select Slack and fill the info in same way. The only difference is Slack messaging don't support the same rich text editing like MS team but that is OK. 
   * in Slack configuration you can specify the ICON url for Slack bot logo for logo customization.
