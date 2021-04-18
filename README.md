@@ -43,7 +43,7 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
    3) What you need to update in the environment variable ?
 
-   ![EnvironmentVariableEdit-3.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/EnvironmentVariableEdit-3.jpg?raw=true)
+    ![EnvironmentVariableEdit-3.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/EnvironmentVariableEdit-3.jpg?raw=true)
    
          *  Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
          *  One of the ID/Password or Token/Secret variable  pair .
