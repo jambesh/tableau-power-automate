@@ -37,8 +37,24 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
       [Check How To Import Postman Collection](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/#importing-github-repositories)
       Importing these two file/collection is pretty easy into post man - just choose import and select one file at a time .
 ###### After Import :
-   4) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work.
-   5) Just edit the Tableau Webhook Environment file and update your Tableau Environment Info/User info to create your webhook
+   1) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work.
+   2) Just edit the Tableau Webhook Environment you imported and update your Tableau Environment Info/User info.
    ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
+   3) What you need to update in the environment variable ?
+   
+VARIABLE | INITIAL VALUE | CURRENT VALUE
+---------| --------------|--------------
+SERVER_URL | DON'T CHANGE/EDIT | SET THE CURRENT VALUE 
+Tableau_AuthToken | DON'T EDIT/CHANHE | It will automatically Set
+SITE_ID | DON'T CHANGE/EDIT | It will automatically Set
+SITE_NAME | DON'T CHANGE/EDIT | SET THE SITE NAME HERE - For Default Site Leave this empty
+API_VERSION | DON'T CHANGE | CHANGE ONLY IF YOU ARE ON OLD TABLEAU VERSION.
+WEBHOOK_URL| DON'T CHANGE | Set this to the URL you got from the Microsoft Flow.
+USER_NAME | DON'T CHANGE | Set the current value to your Tableau user Name (if you plan to use the Login method as ID/Password)
+PASSWORD | DON'T CHANGE | Set the current value to your Tableau user Password (if you plan to use the Login method as ID/Password)
+TOKEN_NAME | DON'T CHANGE | Set the current value to your Tableau TOKEN Name (if you plan to use the Login method Token/Secret )
+TOKEN_SECRET| DON'T CHANGE | Set the current value to your Tableau TOKEN Secret (if you plan to use the Login method Token/Secret )
 
 
+
+   
