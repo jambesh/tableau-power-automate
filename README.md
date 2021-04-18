@@ -50,17 +50,15 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
          *  if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
             (You can create a new Token Name/Secret from your Tableau User Profile setting
 
-   4) Now time to login and Set the variable automatically- To login and setup the environment variable Choose/Click on one of the Login (Type) Postman Request from left and hit "Send" - if you have setup the environment variable correctly then this should return the 200 status with your token info/Site LUID .
-   5) To Create the webhook - says data source failed event - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
+   4) Now time to login  - Click on one of the Login (Type) Postman Request from left(ID/Password OR Token/Secret) and hit "Send" - if you have setup the environment variable correctly for one of login method, then this should return the 200 status with your token info/Site LUID .
+   5) Create the webhook magic  - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the webhook workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
    * Collect the Site LUID return in the JSON  * 
 
-   6) ## For multi Site webhook Event Setup ##  , Edit and Change the Site name in Tableau Environment collection and re-run the step-5 for Workbook and Data Source
-      * collect the Site LUID returned in the JSON * .
+   6) * For multi Site webhook Event Setup *  , Edit and Change the Site name in Tableau Environment collection and re-run the step-5 for Workbook and Data Source
+      * collect the Site LUID returned in the JSON *  These SITE LUIDs You can update in the  Microsoft Flow Dynamic Expression to associate Site LUID to Site Name.
 
-   These SITE LUIDs You can update in the  Microsoft Flow Dynamic Expression to associate Site LUID to Site ID.
-
-   Now you should see the Alert in real time in MS Team/Slack channel to which you directed your message .
-   
+  Finally You shuld see real time Alert in all your medium of communication channel (slack/MS Team etc)
+    
   ## Slack Message Sample for Workbook  & Data Source Failed Events
   ![Site-1-And-Site-2-Message-Slack.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/Site-1-And-Site-2-Message-Slack.jpg?raw=true)
   ## MS Team Message Sample for Workbook & Data Source Failed Events
