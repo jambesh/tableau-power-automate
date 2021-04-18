@@ -8,8 +8,8 @@ Tableau Sent webhook POST message response in JOSN and only Site LUID and not th
 
 * What is good about using MS Flow:
    *     It will be within company license for Office 365 (No additional subscription fees or trial)
-   *     You can log your failure events to microsoft one drive for historical reporting.
-   *     Check flow failure/Success events 
+         You can log your failure events to microsoft one drive for historical reporting.
+         Check flow failure/Success events 
 
 *Bonus:  Customize Failure Alert message to Team with rich text formatting . You can use ICONs etc.
 
