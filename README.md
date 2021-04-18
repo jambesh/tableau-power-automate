@@ -2,9 +2,8 @@
 ![power-automate-4.png](https://github.com/jambesh/tableau-power-automate/blob/main/images/power-automate-jpeg.jpg?raw=true)
 
 # Tableau Power Automate : Automating Multisite Tableau Extract Refresh Failure.
-Automate Multisites Tableau Extract Refresh Failure to Slack , Microsoft Team , Email using tableau webhook and MS flow .
-With MS Flow, absolutely no coding require to setup the webhook and at the same time message custimization ,additional Multisite Setup is easy.
-Tableau Sent webhook POST message response in JOSN and only Site LUID and not the Site name, so unless you associate the LUID to Site name , failure from multi site to single channel or team channel is confusing as user will not know from which site extract failed. With a simple if then else for site mapping , this can be done in flow.
+Automate Multisites Tableau Extract Refresh Failure to Slack , Microsoft Team , Email using Postman , Tableau webhook and MS flow .
+MS Flow is like If-Than-That  , with advance options for dynamic expression/formatting capability to direct output to various medium  and require no setup & coding.
 
 * What is good about using MS Flow:
   
@@ -13,20 +12,31 @@ Tableau Sent webhook POST message response in JOSN and only Site LUID and not th
       *  Check flow failure/Success events 
       *  Use Advance formatting , logging and communication if needed.
 
-*Bonus:  Customize Failure Alert message to Team with rich text formatting . You can use ICONs etc.
-
 ## Pre-Requsite : 
 1) You must have Tableau Site Admin or Server Admin Role or should be able to take help from a Site admin to establish the initial login.
 2) The easy automation , message customization , formatting is done through Microsoft Power Flow , So if your company using Microsoft office 365 suite then this is the solution for you.
 
 ## Software Requirement :
-1) Postman (Free) API testing tool you can install for MAC/Windows  - No Account setup require .
-   This is need one time to login to your Tableau server to create a webhook and after that you can uninstall Postman.
+1) Postman (Free) API testing tool you can install for MAC/Windows  - No Account setup require . 
+   This is needed for one time login to your Tableau server and to create a webhook . (  after that you can uninstall Postman ).
 
 # Step A : Create Webhook URL & Message Customization
-Setting up the webhook URL , Setting up multi site configuration and message formatting using Microsoft Flow 
 
-it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instruction and you should be ready in 15 min.
+Part-1:
+Setting up the webhook URL ,  
+
+Part-2:
+Parse the JSON response from Webhook to use in Message Customization.
+
+
+Part-3:
+Setting up multi site configuration and message formatting and Directing the info to Slack/MS Team.
+
+Tableau return webhook POST success message response in JOSN and the site info is "only Site LUID"  and not the Site name, so unless you associate the Site LUID to Site name , failure from multi site to single channel or team channel is confusing .
+We will handle that in a if then else mapping in MS Flow -
+
+
+
 
 
 # Step B : Create Tableau Webhook (Tell Tableau where to post events when it occur)
