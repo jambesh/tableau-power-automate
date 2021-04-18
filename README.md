@@ -41,6 +41,8 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    2) Just edit the Tableau Webhook Environment you imported and update your Tableau Environment Info/User info.
    ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
    3) What you need to update in the environment variable ?
+
+   ![EnvironmentVariableEdit-3.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/EnvironmentVariableEdit-3.jpg?raw=true)
    
          *  Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
          *  One of the ID/Password or Token/Secret variable  pair .
@@ -55,12 +57,20 @@ Tableau_AuthToken | DON'T EDIT/CHANHE | It will automatically Set
 SITE_ID | DON'T CHANGE/EDIT | It will automatically Set
 SITE_NAME | DON'T CHANGE/EDIT | SET THE SITE NAME HERE - For Default Site Leave this empty
 API_VERSION | DON'T CHANGE | CHANGE ONLY IF YOU ARE ON OLD TABLEAU VERSION.
-WEBHOOK_URL| DON'T CHANGE | Set this to the URL you got from the Microsoft Flow.
+WEBHOOK_URL| DON'T CHANGE | ** Set this to the URL you got from the Microsoft Flow. **
 USER_NAME | DON'T CHANGE | Set the current value to your Tableau user Name (if you plan to use the Login method as ID/Password)
 PASSWORD | DON'T CHANGE | Set the current value to your Tableau user Password (if you plan to use the Login method as ID/Password)
 TOKEN_NAME | DON'T CHANGE | Set the current value to your Tableau TOKEN Name (if you plan to use the Login method Token/Secret )
 TOKEN_SECRET| DON'T CHANGE | Set the current value to your Tableau TOKEN Secret (if you plan to use the Login method Token/Secret )
 
+4) Now time to login and Set the variable automatically- To login and setup the environment variable Choose/Click on one of the Login (Type) Postman Request from left and hit "Send" - if you have setup the environment variable correctly then this should return the 200 status with your token info/Site LUID .
+5) To Create the webhook - says data source failed event - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
+**Collect the Site LUID return in the JSON ** 
+
+6) ## For multi Site webhook Event Setup ##  , Edit and Change the Site name in Tableau Environment collection and re-run the step-5 for Workbook and Data Source
+   ** collect the Site LUID returned in the JSON ** .
+
+These SITE LUIDs You can update in the  Microsoft Flow Dynamic Expression to associate Site LUID to Site ID.
 
 
    
