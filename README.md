@@ -37,7 +37,7 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
       Importing these two file/collection is pretty easy into post man - just choose import and select one file at a time .
 ######After Import :
    4) No changes needed for tableau webhook setup file as every thing on that collection is set from Environment file to avoid manual work.
-   5) Just Setup the variable's value in the Tableau Webhook Environment 
-   
+   5) Just edit the Tableau Webhook Environment file and update your Tableau Environment Info/User info to create your webhook
+   ![edit-env-file.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/edit-env-file.jpg?raw=true)
 
 
