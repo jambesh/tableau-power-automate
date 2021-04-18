@@ -55,10 +55,12 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    5) Create the webhook magic  - select the Data Source Failed Webhook Request from left and hit "Send" - This should create the webhook for tableau data source failed events. To Create the webhook workbook failed events , select the Workbook failed Request from left pane and hit "Send" - This should create a webhook with Workbook failed. 
    * Collect the Site LUID return in the JSON  * 
 
-   6) * For multi Site webhook Event Setup *  , Edit and Change the Site name in Tableau Environment collection and re-run the step-5 for Workbook and Data Source
-      * collect the Site LUID returned in the JSON *  These SITE LUIDs You can update in the  Microsoft Flow Dynamic Expression to associate Site LUID to Site Name.
+   6) For multi Site webhook Event Setup 
+      *  Edit and Change the Site name in Tableau Environment collection and re-run step-5 for Workbook and Data Source
+      *  Collect the Site LUID returned in the JSON 
+      *  These SITE LUIDs , You can update in the  Microsoft Flow Dynamic Expression to map Site LUID to Site Name.
 
-  Finally You shuld see real time Alert in all your medium of communication channel (slack/MS Team etc)
+  Finally You shuld see real time Alert in all your medium of communication channel (slack/MS Team etc) from multi Site Like below -
     
   ## Slack Message Sample for Workbook  & Data Source Failed Events
   ![Site-1-And-Site-2-Message-Slack.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/Site-1-And-Site-2-Message-Slack.jpg?raw=true)
