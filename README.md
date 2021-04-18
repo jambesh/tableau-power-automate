@@ -6,8 +6,8 @@ Automate Multisites Tableau Extract Refresh Failure to Slack , Microsoft Team , 
 With MS Flow, absolutely no coding require to setup the webhook and at the same time message custimization ,additional Multisite Setup is easy.
 Tableau Sent webhook POST message response in JOSN and only Site LUID and not the Site name, so unless you associate the LUID to Site name , failure from multi site to single channel or team channel is confusing as user will not know from which site extract failed. With a simple if then else for site mapping , this can be done in flow.
 
-What is good about using MS Flow:
-* 
+* What is good about using MS Flow:
+*  
       *  It will be within company license for Office 365 (No additional subscription fees or trial)
       *  You can log your failure events to microsoft one drive for historical reporting.
       *  Check flow failure/Success events 
