@@ -74,10 +74,10 @@ We will handle that in a if then else mapping in MS Flow -
       *  Example :  Say for the first time you login to your Default site and you got the site id  d123456789
          and second time you login for a different site says "Finance" and got a  Site luid f123456789 and you want to setup 
          the Alert from these two site.
-      *  Go to Microsoft flow then in the Message Section of Slack/Microsoft Team , select dynamic expression  next to Site Name 
-         replace your  Site ID &  Site Name in the expression that you noted earlier.
-      *  if(equals(body('Parse_JSON')?['site_luid'],'d123456789'),'Default','Finance')
-
+      *  Go to Microsoft flow that you created earlier and edit the flow , In the Message Section of Slack/Microsoft Team 
+         select dynamic expression  next to Site Name :  and replace your  Site ID &  Site Name in the expression below and paste it in the expression 
+         if(equals(body('Parse_JSON')?['site_luid'],'d123456789'),'Default','Finance')
+      ![Site-1-And-Site-2-Message-Slack.jpg](https://github.com/jambesh/tableau-power-automate/blob/main/images/Site-1-And-Site-2-Message-Slack.jpg?raw=true)
 
 
   Once you update the MS Flow Dynamic expression for the Site Name with the right Site LUID/Site Name You shuld see real time Alert from multi Site in same channel dynamically.
