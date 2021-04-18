@@ -22,18 +22,38 @@ MS Flow is like If-Than-That  , with advance options for dynamic expression/form
 
 # Step A : Create Webhook URL & Message Customization
 
-Part-1:
-Setting up the webhook URL ,  
+Part-1: Setting up the webhook URL 
+1) Navigate to https://flow.microsoft.com  and login using your corporate id/password or Single Sign options .
+Once you login, Select + Create from the left side of the Menu and then Select "Instanct Cloud Workflow" from the list of available Start from Blank at the top section.
+2) This will bring up the flow builder , Give a name to your flow and under the list of available option for "Choose How To Trigger the Flow" select 
+   "When an Http Request is received request" this is mostly at the bottom of the list. and click "Create"
+3) Click on + Next Step 
 
-Part-2:
-Parse the JSON response from Webhook to use in Message Customization.
+Part-2:Parse the JSON response from Webhook to use in Message Customization.
 
+1) In the Choose an Operation "Select Parse JSON" to bring the JSON parse  from the above step.
+2) In the *Content* field text box, click and choose "BODY" from the Dynamic Content.
+3) In the *Schema* field text box , Click generate from sample and copy and paste the below  Tableau standard JSON response for refresh failure events in the JOSN input section and click Done to automatically generate the right schema and structure for you .
+* Sample JSON to generate the schema 
+    * {
+        "resource":"DATASOURCE",
+        "event_type":"DatasourceCreated",
+        "resource_name":"My Datasource",
+        "site_luid":"8b2a95d8-52b9-40a4-8712-cd6da771bd1b",
+        "resource_luid":"99",
+        "created_at":"2018-11-15T17:14:45Z"
+        }
 
-Part-3:
-Setting up multi site configuration and message formatting and Directing the info to Slack/MS Team.
+4) Click + Next Step To Customize Extract Failure Time Zone , Tableau JSON return the time in UTC Universal Time ,
+   *  In the Choose a Operation , Search for "Convert Time Zone" and select that.
+   *  In the Time Zone Converstion Box, Click on the Base Time  text bob area and select "Created At" from the Dynamic expression (list of available field)
+   *  then Click on the Source Time zone text box area and choose "(UTC) Coordinated Universal Time" 
+   *  then click on the Destination Time Zone and choose the right time zone for your server or the way you want to see it, i choosed "(UTC) Pacific Time (US & Canada)" as my Time zone.
+   *  Fianlly specify the date format you want to see for your extract failed time - I liked the exact time in this format  "Full date/time pattern (short time) - Monday, June 15, 2009 1:45 PM [f]"
+   
 
-Tableau return webhook POST success message response in JOSN and the site info is "only Site LUID"  and not the Site name, so unless you associate the Site LUID to Site name , failure from multi site to single channel or team channel is confusing .
-We will handle that in a if then else mapping in MS Flow -
+Part-3: Send Message To Slack/MS Team and customize message formatting /multi site condition.
+
 
 
 
