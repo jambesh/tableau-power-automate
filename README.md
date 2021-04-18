@@ -44,9 +44,9 @@ it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instru
    
          *  Update  Tableau Server URL/Site Name (if the Site is Default then leave it empty)
          *  One of the ID/Password or Token/Secret variable  pair .
-         *       if you will use the postman request Login using ID/Password - then update User Name and Password . 
-         *       if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
-                   (You can create a new Token Name/Secret from your Tableau User Profile setting.
+         *  if you will use the postman request Login using ID/Password - then update User Name and Password . 
+         *  if you will use the postman request Login using Token Name/Secret - then update the token name and secret.
+            (You can create a new Token Name/Secret from your Tableau User Profile setting.
    
 VARIABLE | INITIAL VALUE | CURRENT VALUE
 ---------| --------------|--------------
