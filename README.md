@@ -21,16 +21,14 @@ With MS Flow, absolutely no coding require to setup the webhook and at the same 
 1) Postman (Free) API testing tool you can install for MAC/Windows  - No Account setup require .
    This is need one time to login to your Tableau server to create a webhook and after that you can uninstall Postman.
 
-# Create Webhook URL & Message Customization
-## Step A:
+# Step A : Create Webhook URL & Message Customization
 Setting up the webhook URL , Setting up multi site configuration and message formatting using Microsoft Flow 
 
 it is really easy to setup the webhook URL on Mirosoft Flow -  follow the instruction and you should be ready in 15 min.
 
 
-# Direct Tableau to Post Data Refresh Events to your webhook
+# Step B : Direct Tableau to Post Data Refresh Events to your webhook
 
-## Step B:
 ###### Simple Postman Installation and Import Step:
    1) Download latest Postman from https://www.postman.com/downloads/ for your sytem(MAC/Widnows)
    2) Download the two postman json scripts from this github repository  "Tableau Webhook Setup.* "  and "Tableau Environment.*"  into your system.
