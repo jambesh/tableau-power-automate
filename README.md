@@ -82,7 +82,7 @@ Quick TO-DO Instruction just in case it was too much to read -
    2) Just edit the Tableau Webhook Environment you imported by clicking on Eye Icon at the top right (next to environment drop down list) and  edit to update your Tableau Environment Info/User info.
    3) What you need to update in the environment variable ?
 
-   ![webhook-setup-thumbnail](https://www.youtube.com/watch?v=Fh3JiEu2k6s)
+   [![webhook-setup-thumbnail]()https://github.com/jambesh/tableau-power-automate/blob/main/images/webhook-setup-thumbnail.jpg)](https://www.youtube.com/watch?v=Fh3JiEu2k6s)
    
          *  For all the environment variables that need to be edit , just update the CURRENT_VALUE section and leave the initial as-is.
          *  Update  Tableau Server URL & Site Name (if the Site is Default then leave it empty)
