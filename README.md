@@ -66,7 +66,7 @@ Part-3: Configure Message To Slack/MS Team and customize message formatting /mul
 
 Quick TO-DO Instruction just in case it was too much to read -
 
-![Webhook Setup Instruction](https://youtu.be/Fh3JiEu2k6s)
+[![Webhook Setup Instruction](https://github.com/jambesh/tableau-power-automate/blob/main/images/webhook-setup-thumbnail.jpg?raw=true)](https://youtu.be/Fh3JiEu2k6s)
 
 
 
