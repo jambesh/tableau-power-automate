@@ -65,7 +65,8 @@ Part-3: Configure Message To Slack/MS Team and customize message formatting /mul
   * in Slack configuration you can specify the ICON url for Slack bot logo for logo customization.
 
 Quick TO-DO Instruction just in case it was too much to read -
-![Webhook Setup Instruction](https://youtu.be/Fh3JiEu2k6s)
+
+![Webhook Setup Instruction](https://youtu.be/Fh3JiEu2k6s "Everything Is AWESOME")
 
 
 
