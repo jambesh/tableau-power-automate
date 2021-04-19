@@ -64,7 +64,8 @@ Part-3: Configure Message To Slack/MS Team and customize message formatting /mul
   * To add a parallel branch to send the message to slack repeat step -3 but this time instead of Selecting Microsoft Team, Select Slack and fill the info in same way. The only difference is Slack messaging don't support the same rich text editing like MS team but that is OK. 
   * in Slack configuration you can specify the ICON url for Slack bot logo for logo customization.
 
-
+Quick TO-DO Instruction just in case it was too much to read -
+![Webhook Setup Instruction](https://youtu.be/Fh3JiEu2k6s)
 
 
 
